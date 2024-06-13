@@ -1,31 +1,25 @@
 /** @jsxImportSource @emotion/react */
-import React, { useRef, useState } from 'react';
+import React, { useRef } from 'react';
 import { css } from '@emotion/react';
 import { Link } from 'react-router-dom';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 import { Divider } from '@mui/material';
+import { MenuProps } from '../../types';
 
-type MenuProps = {
-  name: string;
-  subMenu?: { subMenuName: string; link: string }[];
-};
 export default function Menu({ name, subMenu }: MenuProps) {
-  const [isHover, setIsHover] = useState(false);
   const subMenuRef = useRef<HTMLUListElement | null>(null);
 
   const handleMouseEnter = () => {
     if (subMenuRef.current) {
       subMenuRef.current.style.height = `${subMenuRef.current.scrollHeight}px`;
-      setIsHover(true);
     }
   };
 
   const handleMouseLeave = () => {
     if (subMenuRef.current) {
       subMenuRef.current.style.height = '0';
-      setIsHover(false);
     }
   };
 
@@ -41,7 +35,7 @@ export default function Menu({ name, subMenu }: MenuProps) {
       {subMenu && (
         <List css={subMenuList} ref={subMenuRef}>
           {subMenu.map(({ subMenuName, link }, index) => (
-            <>
+            <div key={index}>
               <ListItem>
                 <Link to={link} css={subMenuItem}>
                   <ListItemText primary={subMenuName} />
@@ -50,7 +44,7 @@ export default function Menu({ name, subMenu }: MenuProps) {
               {subMenu.length !== index && (
                 <Divider component="li" css={divider} />
               )}
-            </>
+            </div>
           ))}
         </List>
       )}

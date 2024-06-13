@@ -1,22 +1,15 @@
 /** @jsxImportSource @emotion/react */
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { css } from '@emotion/react';
 import Menu from './Menu';
 import MenuIcon from '@mui/icons-material/Menu';
-
-const aboutSubMenu = [
-  { subMenuName: '개요', link: '/about' },
-  { subMenuName: '역사', link: '/about/history' },
-  { subMenuName: '조직도', link: '/about/organization' },
-];
-
-const productSubMenu = [
-  { subMenuName: '인슐린펌프', link: '/product' },
-  { subMenuName: '주입세트', link: '/product/infusion-sets' },
-];
+import CloseIcon from '@mui/icons-material/Close';
+import { aboutSubMenu, productSubMenu } from '../../constants';
+import CustomizedAccordion from '../Accordion';
 
 export default function MenuList() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const mobileMenuRef = useRef<HTMLDivElement | null>(null);
 
   const handleOpenMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -29,11 +22,27 @@ export default function MenuList() {
         <Menu name="제품소개" subMenu={productSubMenu} />
       </div>
       <div css={mobileMenuStyle} onClick={handleOpenMenu}>
-        <MenuIcon css={menuIcon} fontSize="large" />
+        {isMobileMenuOpen ? (
+          <CloseIcon css={menuIcon} fontSize="large" />
+        ) : (
+          <MenuIcon css={menuIcon} fontSize="large" />
+        )}
       </div>
-      {isMobileMenuOpen && (
-        <div css={mobileMenuContainer(isMobileMenuOpen)}>test</div>
-      )}
+      <div
+        css={[mobileMenuList, isMobileMenuOpen && mobileMenuOpen]}
+        ref={mobileMenuRef}
+      >
+        <CustomizedAccordion
+          name="회사소개"
+          subMenu={aboutSubMenu}
+          panelString={'panel1'}
+        />
+        <CustomizedAccordion
+          name="제품소개"
+          subMenu={productSubMenu}
+          panelString={'panel2'}
+        />
+      </div>
     </>
   );
 }
@@ -64,13 +73,24 @@ const menuIcon = css`
   cursor: pointer;
 `;
 
-const mobileMenuContainer = (isMobileMenuOpen: boolean) => css`
+const mobileMenuList = css`
   position: fixed;
-  background-color: red;
+  background-color: #fff;
   overflow: hidden;
-  height: ${isMobileMenuOpen ? '100vh' : '0'};
+  height: 0;
   width: 100%;
   top: 65px;
   left: 0;
   transition: all 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: 992px) {
+    display: none;
+  }
+`;
+
+const mobileMenuOpen = css`
+  height: 100vh;
 `;
