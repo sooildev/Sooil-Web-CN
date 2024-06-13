@@ -1,17 +1,17 @@
 /** @jsxImportSource @emotion/react */
-import React, { ReactElement } from 'react';
+import React from 'react';
 import { css } from '@emotion/react';
 import Header from './header/Header';
 import Footer from './Footer';
+import { Outlet } from 'react-router-dom';
 
-type LayoutProps = {
-  children?: ReactElement;
-};
-export default function Layout({ children }: LayoutProps) {
+export default function Layout() {
   return (
     <div css={layoutStyle}>
       <Header />
-      <main css={mainStyle}>{children}</main>
+      <main css={mainStyle}>
+        <Outlet />
+      </main>
       <Footer />
     </div>
   );

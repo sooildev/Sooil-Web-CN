@@ -7,7 +7,6 @@ import History from './pages/about/History';
 import Organization from './pages/about/Organization';
 import Product from './pages/product/Product';
 import InfusionSets from './pages/product/InfusionSets';
-import Header from './components/header/Header';
 import Layout from './components/Layout';
 
 function App() {
