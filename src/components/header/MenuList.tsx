@@ -5,7 +5,7 @@ import Menu from './Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import { aboutSubMenu, productSubMenu } from '../../constants';
-import CustomizedAccordion from '../Accordion';
+import CustomizedAccordion from './Accordion';
 
 export default function MenuList() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);

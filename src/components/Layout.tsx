@@ -17,7 +17,10 @@ export default function Layout() {
   );
 }
 
-const layoutStyle = css``;
+const layoutStyle = css`
+  width: 100%;
+  box-sizing: border-box;
+`;
 const mainStyle = css`
   margin-top: 100px;
 

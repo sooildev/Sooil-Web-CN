@@ -8,10 +8,10 @@ import MuiAccordionSummary, {
 } from '@mui/material/AccordionSummary';
 import MuiAccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
-import { MenuProps } from '../types';
+import { MenuProps } from '../../types';
 import { Link } from 'react-router-dom';
 import { css } from '@emotion/react';
-import useAccordionsExpanded from '../store/accordionsStore';
+import useAccordionsExpanded from '../../store/accordionsStore';
 
 const Accordion = styled((props: AccordionProps) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />

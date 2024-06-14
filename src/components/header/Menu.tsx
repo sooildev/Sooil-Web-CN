@@ -95,7 +95,7 @@ const subMenuList = css`
   box-shadow: 0px 1px 1px 0px rgba(41, 41, 41, 0.75);
   text-align: left;
   padding: 0;
-  top: 45px;
+  top: 46px;
   left: 13px;
   height: 0;
   box-sizing: border-box;
