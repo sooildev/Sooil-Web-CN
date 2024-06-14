@@ -49,10 +49,10 @@ export default function MainCarousel() {
               <h2>
                 {CAROUSEL_TEXT.first.title.map((text, index) => {
                   return (
-                    <div key={index}>
+                    <React.Fragment key={index}>
                       {text}
                       {CAROUSEL_TEXT.first.title.length !== index && <br />}
-                    </div>
+                    </React.Fragment>
                   );
                 })}
               </h2>
@@ -80,10 +80,10 @@ export default function MainCarousel() {
               <h2>
                 {CAROUSEL_TEXT.second.title.map((text, index) => {
                   return (
-                    <div key={index}>
+                    <React.Fragment key={index}>
                       {text}
                       {CAROUSEL_TEXT.second.title.length !== index && <br />}
-                    </div>
+                    </React.Fragment>
                   );
                 })}
               </h2>

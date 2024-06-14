@@ -39,4 +39,79 @@ const MAIN_APP_BANNER_TEXT = {
   description: '매일매일 쉽고 간편하게 관리할 수 있습니다.',
 };
 
-export { CAROUSEL_TEXT, MAIN_BANNER_TEXT, MAIN_APP_BANNER_TEXT };
+const FOOTER_NAV_TEXT = {
+  about: {
+    title: '회사소개',
+    link: '/about',
+  },
+  product: {
+    title: '제품소개',
+    link: '/product',
+  },
+  eng: {
+    title: 'ENG',
+    link: 'https://www.sooil.com/eng',
+  },
+  mall: {
+    title: 'SOOIL Mall',
+    link: 'https://sooilmall.com/shop',
+  },
+};
+
+const FOOTER_COPYRIGHT_TEXT = {
+  terms: {
+    title: '이용약관',
+    link: 'https://www.sooil.com/bbs/content.php?co_id=provision',
+  },
+  privacy: {
+    title: '개인정보취급방침',
+    link: 'https://www.sooil.com/bbs/content.php?co_id=privacy',
+  },
+  guide: {
+    title: '이용안내',
+    link: 'https://www.sooil.com/bbs/content.php?co_id=information',
+  },
+  companyInfoFirst: [
+    {
+      label: '회사명',
+      value: 'SOOIL Development',
+    },
+    {
+      label: '대표',
+      value: '염윤희',
+    },
+    {
+      label: '주소',
+      value: '경기도 용인시 기흥구 용구대로2325번길 62(마북동)',
+    },
+  ],
+  companyInfoSecond: [
+    {
+      label: '사업자 등록번호',
+      value: '108-81-30224',
+    },
+    {
+      label: '전화',
+      value: '02-3463-0041',
+    },
+    {
+      label: '팩스',
+      value: '02-3463-7707',
+    },
+  ],
+  companyInfoThird: [
+    {
+      label: '의료기기 광고 사전심의번호',
+      value: '2007-110-10-0232, 2007-110-10-0231, 2007-110-10-0276',
+    },
+  ],
+  copyright: '© All rights reserved by SOOIL Developments Co., Ltd',
+};
+
+export {
+  CAROUSEL_TEXT,
+  MAIN_BANNER_TEXT,
+  MAIN_APP_BANNER_TEXT,
+  FOOTER_NAV_TEXT,
+  FOOTER_COPYRIGHT_TEXT,
+};

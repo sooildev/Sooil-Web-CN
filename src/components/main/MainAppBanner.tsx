@@ -30,10 +30,10 @@ export default function MainAppBanner() {
           <h2 css={bannerTitle}>
             {MAIN_APP_BANNER_TEXT.title.map((text, index) => {
               return (
-                <div key={index}>
+                <React.Fragment key={index}>
                   {text}
                   {MAIN_APP_BANNER_TEXT.title.length !== index && <br />}
-                </div>
+                </React.Fragment>
               );
             })}
           </h2>
