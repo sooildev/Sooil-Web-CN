@@ -2,7 +2,7 @@
 import React from 'react';
 import { css } from '@emotion/react';
 import { Link } from 'react-router-dom';
-import logo from '../../assets/images/sooil_logo.png';
+import logo from '../../assets/images/logo/sooil_logo.png';
 
 export default function Logo() {
   return (

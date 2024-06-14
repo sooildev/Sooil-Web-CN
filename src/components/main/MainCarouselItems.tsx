@@ -76,11 +76,6 @@ const rightCarouselItemContent = css`
   align-items: center;
 `;
 
-const CarouselItemImgStyle = css`
-  height: 320px;
-  object-fit: cover;
-`;
-
 const slideEnter = (x: string) => css`
   opacity: 0;
   transform: translateX(${x});
