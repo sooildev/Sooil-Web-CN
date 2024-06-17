@@ -49,13 +49,14 @@ const CarouselItemContent = css`
 const leftCarouselItemContent = css`
   ${CarouselItemContent};
   color: #fff;
-  width: 70%;
+  width: 60%;
   left: 0;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-end;
   padding-left: 15px;
   padding-bottom: 10px;
+  text-align: left;
 
   & h2 {
     line-height: 1.1;
