@@ -1,5 +1,6 @@
 import React from 'react';
+import AboutLayout from './AboutLayout';
 
 export default function History() {
-  return <div>History</div>;
+  return <AboutLayout>History</AboutLayout>;
 }

@@ -51,12 +51,14 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
 
 interface CustomizedAccordionsProps extends MenuProps {
   panelString: string;
+  isSub?: boolean;
 }
 
 export default function CustomizedAccordion({
   name,
   subMenu,
   panelString,
+  isSub = false,
 }: CustomizedAccordionsProps) {
   const { expanded, setExpanded } = useAccordionsExpanded();
   const handleChange =
@@ -64,8 +66,16 @@ export default function CustomizedAccordion({
       setExpanded(newExpanded ? panel : false);
     };
 
+  const handleIsSub = () => {
+    console.log('isSub', isSub);
+    if (!isSub) {
+      return;
+    }
+    setExpanded(false);
+  };
+
   return (
-    <div css={accordionContainerStyle}>
+    <div css={accordionContainerStyle(isSub)}>
       <Accordion
         expanded={expanded === panelString}
         onChange={handleChange(panelString)}
@@ -76,11 +86,18 @@ export default function CustomizedAccordion({
         >
           <Typography>{name}</Typography>
         </AccordionSummary>
-        <AccordionDetails css={accordionDetailsStyle}>
+        <AccordionDetails css={accordionDetailsStyle(isSub)}>
           {subMenu &&
             subMenu.map((subMenuItem, index) => (
-              <Link to={subMenuItem.link} key={index} css={subMenuItemStyle}>
-                <div css={subMenuNameStyle}>{subMenuItem.subMenuName}</div>
+              <Link
+                to={subMenuItem.link}
+                key={index}
+                css={subMenuItemStyle}
+                onClick={handleIsSub}
+              >
+                <div css={subMenuNameStyle(isSub)}>
+                  {subMenuItem.subMenuName}
+                </div>
               </Link>
             ))}
         </AccordionDetails>
@@ -89,15 +106,17 @@ export default function CustomizedAccordion({
   );
 }
 
-const accordionContainerStyle = css`
+const accordionContainerStyle = (isSub: boolean) => css`
+  border: ${isSub ? '1px solid #ccc' : 'none'};
+
   @media (max-width: 992px) {
     width: 100%;
     max-width: 750px;
   }
 `;
 
-const accordionDetailsStyle = css`
-  padding: 0 2rem 1rem 2rem;
+const accordionDetailsStyle = (isSub: boolean) => css`
+  padding: ${isSub ? '0' : '0 2rem 1rem 2rem'};
 `;
 
 const subMenuItemStyle = css`
@@ -106,10 +125,13 @@ const subMenuItemStyle = css`
   text-decoration: none;
 `;
 
-const subMenuNameStyle = css`
+const subMenuNameStyle = (isSub: boolean) => css`
   padding: 1rem;
-
   &:hover {
     background-color: #f5f5f5;
   }
+
+  // sub
+  text-align: ${isSub ? 'center' : 'left'};
+  border-top: ${isSub ? '1px solid #ccc' : 'none'};
 `;

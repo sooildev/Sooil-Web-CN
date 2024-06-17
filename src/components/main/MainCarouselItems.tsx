@@ -41,8 +41,7 @@ export { CarouselItem };
 
 const CarouselItemContent = css`
   position: absolute;
-  width: 50%;
-  height: 320px;
+  height: 100%;
   top: 0;
   box-sizing: border-box;
 `;
@@ -50,6 +49,7 @@ const CarouselItemContent = css`
 const leftCarouselItemContent = css`
   ${CarouselItemContent};
   color: #fff;
+  width: 70%;
   left: 0;
   display: flex;
   justify-content: center;
@@ -65,12 +65,26 @@ const leftCarouselItemContent = css`
 
   & p {
     margin-top: 0;
+    font-size: 0.8rem;
+  }
+
+  @media (max-width: 992px) {
+    & h2 {
+      font-size: 1.8rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    & h2 {
+      font-size: 1.1rem;
+    }
   }
 `;
 
 const rightCarouselItemContent = css`
   ${CarouselItemContent};
   right: 0;
+  width: 30%;
   display: flex;
   justify-content: center;
   align-items: center;

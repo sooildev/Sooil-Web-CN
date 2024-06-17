@@ -97,7 +97,6 @@ const navItem = css`
   position: relative;
   color: #aaa;
   list-style: none;
-  //   border-left: 1px solid #333;
   line-height: 1rem;
   font-size: 1rem;
   padding-left: 0.3rem;
@@ -145,4 +144,8 @@ const copyright = css`
   padding: 1rem 0;
 `;
 
-const logo = css``;
+const logo = css`
+  @media (max-width: 480px) {
+    display: none;
+  }
+`;

@@ -8,7 +8,7 @@ import ListItemText from '@mui/material/ListItemText';
 import { Divider } from '@mui/material';
 import { MenuProps } from '../../types';
 
-export default function Menu({ name, subMenu }: MenuProps) {
+export default function Menu({ name, subMenu, link }: MenuProps) {
   const subMenuRef = useRef<HTMLUListElement | null>(null);
 
   const handleMouseEnter = () => {
@@ -29,7 +29,7 @@ export default function Menu({ name, subMenu }: MenuProps) {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <Link to="/about" css={menu}>
+      <Link to={link as string} css={menu}>
         {name}
       </Link>
       {subMenu && (

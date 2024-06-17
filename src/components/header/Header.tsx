@@ -22,7 +22,7 @@ const header = css`
   width: 100%;
   height: 100px;
   border-bottom: 1px solid #000;
-  z-index: 2;
+  z-index: 10;
   background-color: #fff;
   transition: all 0.5s ease;
   display: flex;

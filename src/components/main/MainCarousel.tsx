@@ -109,4 +109,12 @@ export default function MainCarousel() {
 const CarouselItemImgStyle = css`
   height: 320px;
   object-fit: cover;
+
+  @media (max-width: 992px) {
+    height: 300px;
+  }
+
+  @media (max-width: 480px) {
+    height: 200px;
+  }
 `;

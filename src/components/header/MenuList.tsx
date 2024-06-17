@@ -18,8 +18,8 @@ export default function MenuList() {
   return (
     <>
       <div css={menuList}>
-        <Menu name="회사소개" subMenu={aboutSubMenu} />
-        <Menu name="제품소개" subMenu={productSubMenu} />
+        <Menu name="회사소개" subMenu={aboutSubMenu} link={'/about'} />
+        <Menu name="제품소개" subMenu={productSubMenu} link={'/product'} />
       </div>
       <div css={mobileMenuStyle} onClick={handleOpenMenu}>
         {isMobileMenuOpen ? (

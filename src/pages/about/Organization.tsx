@@ -1,5 +1,6 @@
 import React from 'react';
+import AboutLayout from './AboutLayout';
 
 export default function Organization() {
-  return <div>Organization</div>;
+  return <AboutLayout>Organization</AboutLayout>;
 }

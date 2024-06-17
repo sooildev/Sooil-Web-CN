@@ -1,9 +1,8 @@
 /** @jsxImportSource @emotion/react */
 import React from 'react';
 import { css } from '@emotion/react';
+import AboutLayout from './AboutLayout';
 
 export default function About() {
-  return <div css={container}>About</div>;
+  return <AboutLayout>About</AboutLayout>;
 }
-
-const container = css``;

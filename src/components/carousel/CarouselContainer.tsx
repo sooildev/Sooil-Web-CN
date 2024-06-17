@@ -34,7 +34,7 @@ const CarouseContainer = (bg: string) => css`
     height: 300px;
   }
 
-  @media (max-width: 414px) {
+  @media (max-width: 480px) {
     height: 200px;
   }
 `;
@@ -44,4 +44,13 @@ const innerCarouseContainer = css`
   width: 1170px;
   height: 100%;
   margin: 0 auto;
+
+  @media (max-width: 992px) {
+    width: 100%;
+    max-width: 750px;
+  }
+
+  @media (max-width: 480px) {
+    width: 100%;
+  }
 `;

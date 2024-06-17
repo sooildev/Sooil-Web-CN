@@ -42,7 +42,7 @@ const arrowStyle = (opacity: number, hover: number) => css`
   padding: 0 15px;
   top: 0;
   cursor: pointer;
-  z-index: 10;
+  z-index: 2;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -55,6 +55,14 @@ const arrowStyle = (opacity: number, hover: number) => css`
 
   &:hover {
     opacity: ${0.1 * hover};
+  }
+
+  @media (max-width: 992px) {
+    height: 300px;
+  }
+
+  @media (max-width: 480px) {
+    height: 200px;
   }
 `;
 

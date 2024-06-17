@@ -1,5 +1,6 @@
 import React from 'react';
+import ProductLayout from './ProductLayout';
 
 export default function Product() {
-  return <div>Product</div>;
+  return <ProductLayout>Product</ProductLayout>;
 }

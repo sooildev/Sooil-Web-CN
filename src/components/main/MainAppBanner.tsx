@@ -66,22 +66,37 @@ const innerContainer = (bg: string, isVisible: boolean) => css`
   transition: opacity 1s ease-in-out;
 
   @media (max-width: 992px) {
-    width: 750px;
+    width: 100%;
+    max-width: 750px;
+  }
+
+  @media (max-width: 480px) {
+    width: 100%;
   }
 `;
 
 const textContainer = css`
   padding-left: 30px;
+  width: 80%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin: 0;
+
+  @media (max-width: 480px) {
+    padding: 0 15px;
+  }
 `;
 
 const bannerTitle = css`
   margin: 0;
   font-size: 1.5rem;
   padding: 15px 0;
+
+  @media (max-width: 480px) {
+    font-size: 1.3rem;
+  }
 `;
 
 const bannerDescription = css`
@@ -89,4 +104,8 @@ const bannerDescription = css`
   font-size: 0.95rem;
   line-height: 1.6;
   margin: 0;
+
+  @media (max-width: 480px) {
+    font-size: 0.9rem;
+  }
 `;

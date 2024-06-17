@@ -1,5 +1,6 @@
 import React from 'react';
+import ProductLayout from './ProductLayout';
 
 export default function InfusionSets() {
-  return <div>InfusionSets</div>;
+  return <ProductLayout>InfusionSets</ProductLayout>;
 }
