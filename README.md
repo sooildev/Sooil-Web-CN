@@ -30,6 +30,7 @@ Start the development server:
 
 ## Project Structure
 
+```plaintext
 src/
 ├── apis/
 ├── assets/
@@ -58,3 +59,4 @@ src/
 ├── utils/
 ├── App.tsx
 ├── index.tsx
+```
