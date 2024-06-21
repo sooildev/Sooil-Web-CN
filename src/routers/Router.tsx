@@ -1,12 +1,12 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Layout from '../components/Layout';
-import Main from '../pages/main/Main';
-import About from '../pages/about/About';
-import History from '../pages/about/History';
-import Organization from '../pages/about/Organization';
+// import Main from '../pages/main/Main';
+// import About from '../pages/about/About';
+// import History from '../pages/about/History';
+// import Organization from '../pages/about/Organization';
 import Product from '../pages/product/Product';
-import InfusionSets from '../pages/product/InfusionSets';
+// import InfusionSets from '../pages/product/InfusionSets';
 import Anydana from '../pages/product/Anydana';
 import DanaRs from '../pages/product/DanaRs';
 import DanaR from '../pages/product/DanaR';
