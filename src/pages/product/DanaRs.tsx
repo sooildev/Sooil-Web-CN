@@ -10,10 +10,14 @@ import pump_img_2 from '../../assets/images/sub/product/pump_img2.jpg';
 import pump_img_3 from '../../assets/images/sub/product/pump_img3.jpg';
 import pump_img_4 from '../../assets/images/sub/product/pump_img4.jpg';
 import pump_img_5 from '../../assets/images/sub/product/pump_img5.jpg';
+import { Helmet } from 'react-helmet';
 
 export default function DanaRs() {
   return (
     <ProductLayout>
+      <Helmet>
+        <title>Dana RS</title>
+      </Helmet>
       <Notice />
       <Intro product={PRODUCT_DANA_RS} app={true} />
       <section css={sectionContainer}>

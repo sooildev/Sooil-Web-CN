@@ -8,10 +8,14 @@ import Intro from '../../components/product/Intro';
 import danar_ft_bg1 from '../../assets/images/sub/product/danar_ft_bg01.jpg';
 import danar_ft_bg2 from '../../assets/images/sub/product/danar_ft_bg02.jpg';
 import arrow from '../../assets/images/sub/product/arw_spot_b.png';
+import { Helmet } from 'react-helmet';
 
 export default function DanaR() {
   return (
     <ProductLayout>
+      <Helmet>
+        <title>Dana R</title>
+      </Helmet>
       <Notice />
       <Intro product={PRODUCT_DANA_R} />
       <section css={sectionContainer}>

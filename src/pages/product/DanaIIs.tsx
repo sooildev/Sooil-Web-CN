@@ -9,10 +9,14 @@ import IIS_bg1 from '../../assets/images/sub/product/IIS_ft_bg01.jpg';
 import IIS_bg2 from '../../assets/images/sub/product/IIS_ft_bg02.jpg';
 import IIS_bg3 from '../../assets/images/sub/product/IIS_ft_bg03.jpg';
 import IIS_bg4 from '../../assets/images/sub/product/IIS_ft_bg04.jpg';
+import { Helmet } from 'react-helmet';
 
 export default function DanaIIs() {
   return (
     <ProductLayout>
+      <Helmet>
+        <title>Dana IIS</title>
+      </Helmet>
       <Notice />
       <Intro product={PRODUCT_DANA_IIS} />
       <section css={sectionContainer}>

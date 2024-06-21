@@ -1,5 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import { css } from '@emotion/react';
 
 const containerStyle = css`
@@ -60,6 +61,9 @@ const containerStyle = css`
 const Privacy = () => {
   return (
     <main className="px-0" css={containerStyle}>
+      <Helmet>
+        <title>anyDana隐私政策</title>
+      </Helmet>
       <div className="container">
         <div className="row">
           <div className="col-12 px-0">

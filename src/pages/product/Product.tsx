@@ -10,10 +10,14 @@ import danai_bg_img_2 from '../../assets/images/sub/product/danai_img_2.jpg';
 import danai_bg_img_3 from '../../assets/images/sub/product/danai_img_3.jpg';
 import danai_bg_img_4 from '../../assets/images/sub/product/danai_img_4.jpg';
 import danai_bg_img_5 from '../../assets/images/sub/product/danai_img_5.jpg';
+import { Helmet } from 'react-helmet';
 
 export default function Product() {
   return (
     <ProductLayout>
+      <Helmet>
+        <title>Dana I</title>
+      </Helmet>
       <Notice />
       <Intro product={PRODUCT_DANA_I} app={true} />
       <section css={sectionContainer}>
