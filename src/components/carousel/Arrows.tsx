@@ -7,14 +7,20 @@ import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 interface ArrowProps {
   opacity: number;
   hover: number;
+  isBgColor?: boolean;
   onClick?: () => void;
 }
 
-const PrevArrow = ({ opacity, hover, onClick }: ArrowProps) => {
+const PrevArrow = ({
+  opacity,
+  hover,
+  isBgColor = true,
+  onClick,
+}: ArrowProps) => {
   return (
     <button
       type="button"
-      css={prevArrowStyle(opacity, hover)}
+      css={prevArrowStyle(opacity, hover, isBgColor)}
       onClick={onClick}
     >
       <NavigateBeforeIcon css={iconStyle} fontSize="large" />
@@ -22,11 +28,16 @@ const PrevArrow = ({ opacity, hover, onClick }: ArrowProps) => {
   );
 };
 
-const NextArrow = ({ opacity, hover, onClick }: ArrowProps) => {
+const NextArrow = ({
+  opacity,
+  hover,
+  isBgColor = true,
+  onClick,
+}: ArrowProps) => {
   return (
     <button
       type="button"
-      css={nextArrowStyle(opacity, hover)}
+      css={nextArrowStyle(opacity, hover, isBgColor)}
       onClick={onClick}
     >
       <NavigateNextIcon css={iconStyle} fontSize="large" />
@@ -36,9 +47,10 @@ const NextArrow = ({ opacity, hover, onClick }: ArrowProps) => {
 
 export { PrevArrow, NextArrow };
 
-const arrowStyle = (opacity: number, hover: number) => css`
+const arrowStyle = (opacity: number, hover: number, isBgColor: boolean) => css`
   position: absolute;
-  height: 320px;
+  height: 100%;
+  // height: 320px;
   padding: 0 15px;
   top: 0;
   cursor: pointer;
@@ -49,7 +61,7 @@ const arrowStyle = (opacity: number, hover: number) => css`
   transition: all 0.3s ease;
   background-color: transparent;
   border: none;
-  background: rgba(0, 0, 0, 0.1);
+  background: ${isBgColor ? 'rgba(0, 0, 0, 0.1)' : 'none'};
   box-sizing: border-box;
   opacity: ${opacity};
 
@@ -58,21 +70,29 @@ const arrowStyle = (opacity: number, hover: number) => css`
   }
 
   @media (max-width: 992px) {
-    height: 300px;
+    // height: 300px;
   }
 
   @media (max-width: 480px) {
-    height: 200px;
+    // height: 200px;
   }
 `;
 
-const prevArrowStyle = (opacity: number, hover: number) => css`
-  ${arrowStyle(opacity, hover)};
+const prevArrowStyle = (
+  opacity: number,
+  hover: number,
+  isBgColor: boolean
+) => css`
+  ${arrowStyle(opacity, hover, isBgColor)};
   left: 0;
 `;
 
-const nextArrowStyle = (opacity: number, hover: number) => css`
-  ${arrowStyle(opacity, hover)};
+const nextArrowStyle = (
+  opacity: number,
+  hover: number,
+  isBgColor: boolean
+) => css`
+  ${arrowStyle(opacity, hover, isBgColor)};
   right: 0;
 `;
 

@@ -5,8 +5,12 @@ const aboutSubMenu = [
 ];
 
 const productSubMenu = [
-  { subMenuName: '인슐린펌프', link: '/product' },
-  { subMenuName: '주입세트', link: '/product/infusion-sets' },
+  { subMenuName: 'Dana i', link: '/' },
+  { subMenuName: 'Dana RS', link: '/dana-rs' },
+  { subMenuName: 'Dana R', link: '/dana-r' },
+  { subMenuName: 'Dana IIS', link: '/dana-iiS' },
+  { subMenuName: 'AnyDana应用程序', link: '/anydana' },
+  // { subMenuName: '주입세트', link: '/product/infusion-sets' },
 ];
 
 export { aboutSubMenu, productSubMenu };

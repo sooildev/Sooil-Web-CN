@@ -1,11 +1,11 @@
 import { create } from 'zustand';
 
-type useAccordionsExpandedProps = {
+type UseAccordionsExpandedProps = {
   expanded: string | false;
   setExpanded: (panel: string | false) => void;
 };
 
-const useAccordionsExpanded = create<useAccordionsExpandedProps>((set) => ({
+const useAccordionsExpanded = create<UseAccordionsExpandedProps>((set) => ({
   expanded: 'panel1',
   setExpanded: (panel) => set({ expanded: panel }),
 }));

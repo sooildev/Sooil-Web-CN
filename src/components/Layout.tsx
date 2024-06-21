@@ -12,7 +12,7 @@ export default function Layout() {
       <main css={mainStyle}>
         <Outlet />
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

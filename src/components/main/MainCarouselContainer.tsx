@@ -3,11 +3,12 @@ import React from 'react';
 import { css } from '@emotion/react';
 
 interface CarouselContainerProps {
+  height?: string;
   bg: string;
   children: React.ReactNode;
 }
 
-export default function CarouselContainer({
+export default function MainCarouselContainer({
   bg,
   children,
 }: CarouselContainerProps) {

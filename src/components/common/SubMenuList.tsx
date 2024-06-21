@@ -1,28 +1,34 @@
 /** @jsxImportSource @emotion/react */
 import React from 'react';
 import { css } from '@emotion/react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import CustomizedAccordion from '../header/Accordion';
 import { MenuProps } from '../../types';
 
 type SubMenuProps = Omit<MenuProps, 'name' | 'link'>;
 
 export default function SubMenuList({ subMenu }: SubMenuProps) {
+  const location = useLocation();
+
   return (
     <div css={container}>
       <div css={innerContainer}>
         <div css={buttonGroup}>
           {subMenu?.map(({ subMenuName, link }, index) => (
-            <Link to={link} css={linkButton} key={index}>
+            <Link
+              to={link}
+              css={[linkButton, link === location.pathname && active]}
+              key={index}
+            >
               {subMenuName}
             </Link>
           ))}
         </div>
         <div css={mobileButtonGroup}>
           <CustomizedAccordion
-            name="서브메뉴"
+            name="子菜单"
             subMenu={subMenu}
-            panelString={'panel-about'}
+            panelString={'panel-product'}
             isSub={true}
           />
         </div>
@@ -63,6 +69,7 @@ const linkButton = css`
   width: 13.5%;
   text-align: center;
   transition: all 0.3s ease;
+  box-sizing: border-box;
 
   &:after {
     content: '';
@@ -80,6 +87,7 @@ const linkButton = css`
 
   &:hover {
     color: #0075c3;
+  }
 `;
 
 const mobileButtonGroup = css`
@@ -90,4 +98,9 @@ const mobileButtonGroup = css`
     display: flex;
     justify-content: center;
   }
+`;
+
+const active = css`
+  color: #0075c3;
+  font-weight: bold;
 `;

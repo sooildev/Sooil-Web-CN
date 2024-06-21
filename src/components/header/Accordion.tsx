@@ -52,6 +52,7 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
 interface CustomizedAccordionsProps extends MenuProps {
   panelString: string;
   isSub?: boolean;
+  onClick?: () => void;
 }
 
 export default function CustomizedAccordion({
@@ -59,6 +60,7 @@ export default function CustomizedAccordion({
   subMenu,
   panelString,
   isSub = false,
+  onClick,
 }: CustomizedAccordionsProps) {
   const { expanded, setExpanded } = useAccordionsExpanded();
   const handleChange =
@@ -67,11 +69,8 @@ export default function CustomizedAccordion({
     };
 
   const handleIsSub = () => {
-    console.log('isSub', isSub);
-    if (!isSub) {
-      return;
-    }
     setExpanded(false);
+    onClick && onClick();
   };
 
   return (

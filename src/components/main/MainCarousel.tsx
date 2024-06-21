@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { css } from '@emotion/react';
 import Carousel from '../carousel/Carousel';
 import { NextArrow, PrevArrow } from '../carousel/Arrows';
-import CarouselContainer from '../carousel/CarouselContainer';
+import CarouselContainer from './MainCarouselContainer';
 import main_vs01 from '../../assets/images/main/main_vs01.png';
 import main_vs01_bg from '../../assets/images/main/main_vs01_bg.jpg';
 import main_vs02 from '../../assets/images/main/main_vs02.png';

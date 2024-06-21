@@ -1,5 +1,5 @@
 /** @jsxImportSource @emotion/react */
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { css } from '@emotion/react';
 import Menu from './Menu';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -12,35 +12,52 @@ export default function MenuList() {
   const mobileMenuRef = useRef<HTMLDivElement | null>(null);
 
   const handleOpenMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
+    setIsMobileMenuOpen(true);
   };
+
+  const handleColoseMenu = () => {
+    setIsMobileMenuOpen(false);
+  };
+
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, [isMobileMenuOpen]);
 
   return (
     <>
       <div css={menuList}>
-        <Menu name="회사소개" subMenu={aboutSubMenu} link={'/about'} />
-        <Menu name="제품소개" subMenu={productSubMenu} link={'/product'} />
+        {/* <Menu name="회사소개" subMenu={aboutSubMenu} link={'/about'} /> */}
+        <Menu name="产品介绍" subMenu={productSubMenu} link={'/'} />
       </div>
-      <div css={mobileMenuStyle} onClick={handleOpenMenu}>
+      <div
+        css={mobileMenuStyle}
+        onClick={isMobileMenuOpen ? handleColoseMenu : handleOpenMenu}
+      >
         {isMobileMenuOpen ? (
           <CloseIcon css={menuIcon} fontSize="large" />
         ) : (
           <MenuIcon css={menuIcon} fontSize="large" />
         )}
       </div>
-      <div
-        css={[mobileMenuList, isMobileMenuOpen && mobileMenuOpen]}
-        ref={mobileMenuRef}
-      >
-        <CustomizedAccordion
+      <div css={mobileMenuList(isMobileMenuOpen)} ref={mobileMenuRef}>
+        {/* <CustomizedAccordion
           name="회사소개"
           subMenu={aboutSubMenu}
           panelString={'panel1'}
-        />
+        /> */}
         <CustomizedAccordion
-          name="제품소개"
+          name="产品介绍"
           subMenu={productSubMenu}
-          panelString={'panel2'}
+          panelString={'panel1'}
+          onClick={handleColoseMenu}
         />
       </div>
     </>
@@ -73,11 +90,11 @@ const menuIcon = css`
   cursor: pointer;
 `;
 
-const mobileMenuList = css`
+const mobileMenuList = (isMobileMenuOpen: boolean) => css`
   position: fixed;
   background-color: #fff;
   overflow: hidden;
-  height: 0;
+  height: ${isMobileMenuOpen ? '100vh' : '0'};
   width: 100%;
   top: 65px;
   left: 0;
@@ -89,8 +106,4 @@ const mobileMenuList = css`
   @media (min-width: 992px) {
     display: none;
   }
-`;
-
-const mobileMenuOpen = css`
-  height: 100vh;
 `;

@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import React, { ReactNode, forwardRef } from 'react';
 import Slider, { Settings } from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -8,6 +8,14 @@ interface CarouselProps {
   children?: ReactNode;
 }
 
-export default function Carousel({ settings, children }: CarouselProps) {
-  return <Slider {...settings}>{children}</Slider>;
-}
+const Carousel = forwardRef<Slider, CarouselProps>(
+  ({ settings, children }, ref) => {
+    return (
+      <Slider {...settings} ref={ref as React.Ref<Slider> | undefined}>
+        {children}
+      </Slider>
+    );
+  }
+);
+
+export default Carousel;
