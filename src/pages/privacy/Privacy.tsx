@@ -4,6 +4,11 @@ import { Helmet } from 'react-helmet';
 import { css } from '@emotion/react';
 
 const containerStyle = css`
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+
   .px-0 {
     padding-left: 0;
     padding-right: 0;
@@ -13,6 +18,16 @@ const containerStyle = css`
     margin-right: auto;
     padding-left: 15px;
     padding-right: 15px;
+
+    width: 1170px;
+    height: 100%;
+    padding: 0 15px;
+    box-sizing: border-box;
+
+    @media (max-width: 992px) {
+      width: 100%;
+      max-width: 750px;
+    }
   }
   .row {
     display: flex;

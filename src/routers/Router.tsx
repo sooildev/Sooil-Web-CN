@@ -22,7 +22,6 @@ export default function Router() {
         <Route path="/dana-r" element={<DanaR />} />
         <Route path="/dana-iis" element={<DanaIIs />} />
         <Route path="/anydana" element={<Anydana />} />
-        <Route path="/privacy" element={<Privacy />} />
         {/* <Route index element={<Main />} /> */}
         {/* <Route path="/about" element={<About />} /> */}
         {/* <Route path="/about/history" element={<History />} /> */}
@@ -31,6 +30,7 @@ export default function Router() {
         {/* <Route path="/product/anydana-application" element={<Anydana />} /> */}
         {/* <Route path="/product/infusion-sets" element={<InfusionSets />} /> */}
       </Route>
+      <Route path="/privacy" element={<Privacy />} />
     </Routes>
   );
 }
