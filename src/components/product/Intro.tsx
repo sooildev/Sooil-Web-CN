@@ -37,12 +37,12 @@ export default function Intro({
       <div css={contentBox}>
         <h1 css={titleStyle(app)}>
           {title}
-          {app && (
+          {/* {app && (
             <div css={appImgBox}>
               <img src={android} alt="android_img" />
               <img src={ios} alt="ios_img" />
             </div>
-          )}
+          )} */}
         </h1>
         <h2 css={subTitleStyle}>
           {subtitle.length > 0 &&

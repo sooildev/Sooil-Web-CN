@@ -85,7 +85,16 @@ const Privacy = () => {
             <div className="card">
               <div className="card-body px-0 px-sm-3" id="content">
                 <b>
-                  <span style={{ fontSize: 'x-large' }}>anyDana隐私政策</span>
+                  <span
+                    style={{
+                      fontSize: 'x-large',
+                      textAlign: 'center',
+                      width: '100%',
+                      display: 'block',
+                    }}
+                  >
+                    anyDana隐私政策
+                  </span>
                 </b>
                 <br />
                 <br />

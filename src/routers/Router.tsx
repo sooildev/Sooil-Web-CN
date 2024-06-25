@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import Layout from '../components/Layout';
 // import Main from '../pages/main/Main';
 // import About from '../pages/about/About';
@@ -22,6 +22,7 @@ export default function Router() {
         <Route path="/dana-r" element={<DanaR />} />
         <Route path="/dana-iis" element={<DanaIIs />} />
         <Route path="/anydana" element={<Anydana />} />
+        <Route path="*" element={<Navigate to="/" />} />
         {/* <Route index element={<Main />} /> */}
         {/* <Route path="/about" element={<About />} /> */}
         {/* <Route path="/about/history" element={<History />} /> */}

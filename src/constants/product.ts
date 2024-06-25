@@ -29,7 +29,7 @@ import dana_iis_thum2 from '../assets/images/sub/product/IIS_thumb_02.png';
 import dana_iis_thum3 from '../assets/images/sub/product/IIS_thumb_03.png';
 import dana_iis_thum4 from '../assets/images/sub/product/IIS_thumb_04.png';
 import dana_iis_thum5 from '../assets/images/sub/product/IIS_thumb_05.png';
-import any_dana from '../assets/images/sub/product/anydana-application.png';
+import any_dana from '../assets/images/sub/product/anydana.png';
 
 const PRODUCT_SUB_VISUAL_TEXT = {
   subTitle: '产品介绍',
