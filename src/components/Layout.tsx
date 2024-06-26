@@ -4,6 +4,7 @@ import { css } from '@emotion/react';
 import Header from './header/Header';
 // import Footer from './Footer';
 import { Outlet } from 'react-router-dom';
+import Footer from './Footer';
 
 export default function Layout() {
   return (
@@ -12,7 +13,7 @@ export default function Layout() {
       <main css={mainStyle}>
         <Outlet />
       </main>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }

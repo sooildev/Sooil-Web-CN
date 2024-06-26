@@ -71,6 +71,32 @@ const FOOTER_COPYRIGHT_TEXT = {
     title: '이용안내',
     link: 'https://www.sooil.com/bbs/content.php?co_id=information',
   },
+  companyInfo: [
+    {
+      label: 'E-mail',
+      value: 'dana@golddana.com',
+    },
+    {
+      label: '电话',
+      value: '0755-83479626',
+    },
+    {
+      label: '传真',
+      value: '0755-83458827',
+    },
+    {
+      label: '地址',
+      value: '深圳市福田区福田街道福华一路98号卓越大厦1703-1704',
+    },
+    {
+      label: '邮编',
+      value: '518040',
+    },
+    {
+      label: '粤ICP备',
+      value: '粤ICP备16068842号-4',
+    },
+  ],
   companyInfoFirst: [
     {
       label: '회사명',

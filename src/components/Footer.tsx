@@ -8,7 +8,7 @@ export default function Footer() {
   return (
     <footer css={container}>
       <div css={innerContainer}>
-        <FooterNav />
+        {/* <FooterNav /> */}
         <Copyright />
       </div>
     </footer>

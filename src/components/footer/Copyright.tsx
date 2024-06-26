@@ -8,7 +8,7 @@ export default function Copyright() {
   return (
     <div css={container}>
       <div css={copyrightContainer}>
-        <ul css={navList}>
+        {/* <ul css={navList}>
           <li css={navItem}>
             <div
               css={link}
@@ -39,9 +39,28 @@ export default function Copyright() {
               {FOOTER_COPYRIGHT_TEXT.guide.title}
             </div>
           </li>
-        </ul>
+        </ul> */}
         <div css={address}>
-          <p>
+          <p css={companyInfoBox}>
+            {FOOTER_COPYRIGHT_TEXT.companyInfo.map((info, index) => (
+              <div key={index}>
+                <span>{info.label}</span>{' '}
+                {index === FOOTER_COPYRIGHT_TEXT.companyInfo.length - 1 ? (
+                  <a
+                    href="https://beian.miit.gov.cn"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {info.value}
+                  </a>
+                ) : (
+                  info.value
+                )}
+                {/* {index < FOOTER_COPYRIGHT_TEXT.companyInfo.length - 1 && ' / '} */}
+              </div>
+            ))}
+          </p>
+          {/* <p>
             {FOOTER_COPYRIGHT_TEXT.companyInfoFirst.map((info, index) => (
               <React.Fragment key={index}>
                 <span>{info.label}</span> {info.value}
@@ -65,13 +84,11 @@ export default function Copyright() {
                 <span>{info.label}</span> {info.value}
               </React.Fragment>
             ))}
-          </p>
+          </p> */}
         </div>
-        <div css={copyright}>{FOOTER_COPYRIGHT_TEXT.copyright}</div>
+        {/* <div css={copyright}>{FOOTER_COPYRIGHT_TEXT.copyright}</div> */}
       </div>
-      <div css={logo}>
-        <img src={footerLogo} alt="footer logo" />
-      </div>
+      <div css={logo}>{/* <img src={footerLogo} alt="footer logo" /> */}</div>
     </div>
   );
 }
@@ -80,7 +97,7 @@ const container = css`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 0;
+  padding: 2rem 0;
 `;
 
 const copyrightContainer = css`
@@ -148,4 +165,25 @@ const logo = css`
   @media (max-width: 480px) {
     display: none;
   }
+`;
+
+const companyInfoBox = css`
+  display: flex;
+  flex-wrap: wrap;
+  // flex-direction: column;
+  gap: 15px;
+
+  // & div span {
+  //   font-weight: bold;
+  // }
+
+  & a {
+    text-decoration: none;
+    color: #686868;
+  }
+
+  // @media (max-width: 768px) {
+  //   flex-direction: column;
+  //   gap: 10px;
+  // }
 `;
