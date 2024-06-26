@@ -8,7 +8,7 @@ export default function Header() {
   return (
     <header css={header}>
       <div css={innerContainer}>
-        <Logo />
+        {/* <Logo /> */}
         <MenuList />
       </div>
     </header>
@@ -40,7 +40,8 @@ const innerContainer = css`
   padding: 0 15px;
   box-sizing: border-box;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
+  // justify-content: space-between;
 
   @media (max-width: 992px) {
     width: 750px;

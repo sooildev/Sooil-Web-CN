@@ -93,7 +93,7 @@ const FOOTER_COPYRIGHT_TEXT = {
       value: '518040',
     },
     {
-      label: '粤ICP备',
+      label: '',
       value: '粤ICP备16068842号-4',
     },
   ],

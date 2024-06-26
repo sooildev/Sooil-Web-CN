@@ -40,27 +40,46 @@ export default function Copyright() {
             </div>
           </li>
         </ul> */}
-        <div css={address}>
+        <div css={copyright}>
+          {FOOTER_COPYRIGHT_TEXT.companyInfo.slice(3).map((info, index) => (
+            <div key={index}>
+              <span>
+                {index === 0 ? `Copyright © ${info.label}` : info.label}
+              </span>
+              {index === 2 ? (
+                <a
+                  href="https://beian.miit.gov.cn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {info.value}
+                </a>
+              ) : (
+                info.value
+              )}
+              {/* {index < FOOTER_COPYRIGHT_TEXT.companyInfo.length - 1 && ' / '} */}
+            </div>
+          ))}
+        </div>
+        <div css={copyright}>
+          {FOOTER_COPYRIGHT_TEXT.companyInfo.slice(0, 3).map((info, index) => (
+            <div key={index}>
+              <span>{info.label}</span> {info.value}
+              {/* {index < FOOTER_COPYRIGHT_TEXT.companyInfo.length - 1 && ' / '} */}
+            </div>
+          ))}
+        </div>
+        {/* <div css={address}>
           <p css={companyInfoBox}>
-            {FOOTER_COPYRIGHT_TEXT.companyInfo.map((info, index) => (
-              <div key={index}>
-                <span>{info.label}</span>{' '}
-                {index === FOOTER_COPYRIGHT_TEXT.companyInfo.length - 1 ? (
-                  <a
-                    href="https://beian.miit.gov.cn"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {info.value}
-                  </a>
-                ) : (
-                  info.value
-                )}
-                {/* {index < FOOTER_COPYRIGHT_TEXT.companyInfo.length - 1 && ' / '} */}
-              </div>
-            ))}
+            {FOOTER_COPYRIGHT_TEXT.companyInfo
+              .slice(0, 3)
+              .map((info, index) => (
+                <div key={index}>
+                  <span>{info.label}</span> {info.value}
+                </div>
+              ))}
           </p>
-          {/* <p>
+          <p>
             {FOOTER_COPYRIGHT_TEXT.companyInfoFirst.map((info, index) => (
               <React.Fragment key={index}>
                 <span>{info.label}</span> {info.value}
@@ -84,11 +103,11 @@ export default function Copyright() {
                 <span>{info.label}</span> {info.value}
               </React.Fragment>
             ))}
-          </p> */}
-        </div>
-        {/* <div css={copyright}>{FOOTER_COPYRIGHT_TEXT.copyright}</div> */}
+          </p>
+        </div> */}
+        {/* <div css={copyright}>Copyright {FOOTER_COPYRIGHT_TEXT.copyright}</div> */}
       </div>
-      <div css={logo}>{/* <img src={footerLogo} alt="footer logo" /> */}</div>
+      {/* <div css={logo}><img src={footerLogo} alt="footer logo" /></div> */}
     </div>
   );
 }
@@ -141,24 +160,39 @@ const link = css`
 
 const address = css`
   font-size: 0.8rem;
+  color: #fff;
 
   & p {
-    color: #686868;
-    font-weight: bold;
+    color: #fff;
+    // font-weight: bold;
     padding: 0;
     margin: 0.3rem;
   }
 
   & p span {
-    color: #555;
+    margin: 0;
+    padding: 0;
     font-weight: normal;
   }
 `;
 
 const copyright = css`
+  display: flex;
   font-size: 0.8rem;
-  color: #686868;
-  padding: 1rem 0;
+  color: #fff;
+  gap: 0.8rem;
+  padding-top: 0.8rem;
+  flex-wrap: wrap;
+  line-height: 1.5;
+
+  & span {
+    opacity: 0.8;
+  }
+
+  & a {
+    text-decoration: none;
+    color: #fff;
+  }
 `;
 
 const logo = css`
@@ -171,19 +205,9 @@ const companyInfoBox = css`
   display: flex;
   flex-wrap: wrap;
   // flex-direction: column;
-  gap: 15px;
+  gap: 10px;
 
-  // & div span {
-  //   font-weight: bold;
-  // }
-
-  & a {
-    text-decoration: none;
-    color: #686868;
+  & div span {
+    opacity: 0.8;
   }
-
-  // @media (max-width: 768px) {
-  //   flex-direction: column;
-  //   gap: 10px;
-  // }
 `;
