@@ -18,8 +18,9 @@ export default function Router() {
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
-        <Route index element={<Product />} />
-        <Route path="/dana-rs" element={<DanaRs />} />
+        <Route index element={<DanaRs />} />
+        {/* <Route index element={<Product />} /> */}
+        {/* <Route path="/dana-rs" element={<DanaRs />} /> */}
         <Route path="/dana-r" element={<DanaR />} />
         <Route path="/dana-iis" element={<DanaIIs />} />
         <Route path="/anydana" element={<Anydana />} />

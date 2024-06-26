@@ -5,8 +5,9 @@ const aboutSubMenu = [
 ];
 
 const productSubMenu = [
-  { subMenuName: 'Diabecare DANA-i', link: '/' },
-  { subMenuName: 'Dana Diabecare RS', link: '/dana-rs' },
+  // { subMenuName: 'Diabecare DANA-i', link: '/' },
+  // { subMenuName: 'Dana Diabecare RS', link: '/dana-rs' },
+  { subMenuName: 'Dana Diabecare RS', link: '/' },
   { subMenuName: 'Dana Diabecare R', link: '/dana-r' },
   { subMenuName: 'Dana Diabecare IIS', link: '/dana-iiS' },
   { subMenuName: 'AnyDana 应用程序', link: '/anydana' },
