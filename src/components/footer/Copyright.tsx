@@ -55,7 +55,7 @@ export default function Copyright() {
                   {info.value}
                 </a>
               ) : (
-                info.value
+                ` ${info.value}`
               )}
               {/* {index < FOOTER_COPYRIGHT_TEXT.companyInfo.length - 1 && ' / '} */}
             </div>
