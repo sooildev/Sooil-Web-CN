@@ -10,7 +10,7 @@ export default function Anydana() {
   return (
     <ProductLayout>
       <Helmet>
-        <title>AnyDana应用程序</title>
+        <title>AnyDana 应用程序</title>
       </Helmet>
       <Intro product={PRODUCT_ANY_DANA} isAnyDana={true} app={true} />
       <section css={sectionContainer}>

@@ -5,11 +5,11 @@ const aboutSubMenu = [
 ];
 
 const productSubMenu = [
-  { subMenuName: 'Dana i', link: '/' },
-  { subMenuName: 'Dana RS', link: '/dana-rs' },
-  { subMenuName: 'Dana R', link: '/dana-r' },
-  { subMenuName: 'Dana IIS', link: '/dana-iiS' },
-  { subMenuName: 'AnyDana应用程序', link: '/anydana' },
+  { subMenuName: 'Diabecare DANA-i', link: '/' },
+  { subMenuName: 'Dana Diabecare RS', link: '/dana-rs' },
+  { subMenuName: 'Dana Diabecare R', link: '/dana-r' },
+  { subMenuName: 'Dana Diabecare IIS', link: '/dana-iiS' },
+  { subMenuName: 'AnyDana 应用程序', link: '/anydana' },
   // { subMenuName: '주입세트', link: '/product/infusion-sets' },
 ];
 
