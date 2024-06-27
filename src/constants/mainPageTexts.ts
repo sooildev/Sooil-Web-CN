@@ -141,7 +141,7 @@ const FOOTER_COPYRIGHT_TEXT = {
   icp_companyInfo: [
     {
       label: '',
-      value: '©2024 深圳市丹纳科技有限公司 版权所有 粤ICP16068842号-4',
+      value: '©2024 深圳市丹纳科技有限公司 版权所有',
     },
     {
       label: '',
