@@ -73,13 +73,13 @@ const FOOTER_COPYRIGHT_TEXT = {
   },
   companyInfo_0: [
     {
-      label: '',
+      label: '除朝辭',
       value: 'SOOIL Development Co., Ltd',
     },
   ],
   companyInfo_1: [
     {
-      label: '除朝辭',
+      label: '地址',
       value:
         '62, Yonggu-daero 2325beon-gil, Giheung-gu, Yongin-si, Gyeonggi-do Republic of Korea',
     },
@@ -93,15 +93,9 @@ const FOOTER_COPYRIGHT_TEXT = {
       label: 'Fax',
       value: '+82(2)3463-7707',
     },
-  ],
-  companyInfo_3: [
     {
       label: 'Email',
       value: 'sooil@sooil.com',
-    },
-    {
-      label: 'Homepage',
-      value: 'https://www.sooil.com',
     },
   ],
   cn_companyInfo_1: [

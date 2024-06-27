@@ -43,7 +43,7 @@ export default function Copyright() {
         <div css={copyright}>
           {FOOTER_COPYRIGHT_TEXT.companyInfo_0.map((info, index) => (
             <div key={index}>
-              <span>{info.label}</span>
+              <span css={infoLabel}>{info.label}</span>
               <span>{info.value}</span>
             </div>
           ))}
@@ -55,14 +55,6 @@ export default function Copyright() {
           ))}
           <div css={copyrightSubBox}>
             {FOOTER_COPYRIGHT_TEXT.companyInfo_2.map((info, index) => (
-              <div key={index}>
-                <span css={infoLabel}>{info.label}</span>
-                <span>{info.value}</span>
-              </div>
-            ))}
-          </div>
-          <div css={copyrightSubBox}>
-            {FOOTER_COPYRIGHT_TEXT.companyInfo_3.map((info, index) => (
               <div key={index}>
                 <span css={infoLabel}>{info.label}</span>
                 <span>{info.value}</span>
