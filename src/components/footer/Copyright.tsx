@@ -41,103 +41,89 @@ export default function Copyright() {
           </li>
         </ul> */}
         <div css={copyright}>
+          {FOOTER_COPYRIGHT_TEXT.companyInfo_0.map((info, index) => (
+            <div key={index}>
+              <span>{info.label}</span>
+              <span>{info.value}</span>
+            </div>
+          ))}
           {FOOTER_COPYRIGHT_TEXT.companyInfo_1.map((info, index) => (
             <div key={index}>
-              <span>{info.label}</span> {info.value}
+              <span css={infoLabel}>{info.label}</span>
+              <span>{info.value}</span>
             </div>
           ))}
+          <div css={copyrightSubBox}>
+            {FOOTER_COPYRIGHT_TEXT.companyInfo_2.map((info, index) => (
+              <div key={index}>
+                <span css={infoLabel}>{info.label}</span>
+                <span>{info.value}</span>
+              </div>
+            ))}
+          </div>
+          <div css={copyrightSubBox}>
+            {FOOTER_COPYRIGHT_TEXT.companyInfo_3.map((info, index) => (
+              <div key={index}>
+                <span css={infoLabel}>{info.label}</span>
+                <span>{info.value}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div css={copyright}>
+          <div css={copyrightSubBox}>
+            {FOOTER_COPYRIGHT_TEXT.cn_companyInfo_1.map((info, index) => (
+              <div key={index}>
+                <span>{info.label}</span>
+                <span>{info.value}</span>
+              </div>
+            ))}
+          </div>
+          <div css={copyrightSubBox}>
+            {FOOTER_COPYRIGHT_TEXT.cn_companyInfo_2.map((info, index) => (
+              <div key={index}>
+                <span css={infoLabel}>{info.label}</span>
+                <span>{info.value}</span>
+              </div>
+            ))}
+          </div>
         </div>
         <div css={copyright}>
-          {FOOTER_COPYRIGHT_TEXT.companyInfo_2.map((info, index) => (
-            <div key={index}>
-              <span>{info.label}</span> {info.value}
+          <div css={copyrightSubBox}>
+            {FOOTER_COPYRIGHT_TEXT.cn_companyInfo_3.map((info, index) => (
+              <div key={index}>
+                <span>{info.label}</span>
+                <span>{info.value}</span>
+              </div>
+            ))}
+          </div>
+          <div css={copyrightSubBox}>
+            {FOOTER_COPYRIGHT_TEXT.cn_companyInfo_4.map((info, index) => (
+              <div key={index}>
+                <span css={infoLabel}>{info.label}</span>
+                <span>{info.value}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div css={copyright}>
+          <div css={copyrightSubBox}>
+            <div>
+              <span>{FOOTER_COPYRIGHT_TEXT.icp_companyInfo[0].label}</span>{' '}
+              {FOOTER_COPYRIGHT_TEXT.icp_companyInfo[0].value}
             </div>
-          ))}
-        </div>
-        <div css={copyright}>
-          {FOOTER_COPYRIGHT_TEXT.cn_companyInfo_1.map((info, index) => (
-            <div key={index}>
-              <span>{info.label}</span> {info.value}
-            </div>
-          ))}
-        </div>
-        <div css={copyright}>
-          {FOOTER_COPYRIGHT_TEXT.cn_companyInfo_2.map((info, index) => (
-            <div key={index}>
-              <span>{info.label}</span> {info.value}
-            </div>
-          ))}
-        </div>
-        <div css={copyright}>
-          {FOOTER_COPYRIGHT_TEXT.cn_companyInfo_3.map((info, index) => (
-            <div key={index}>
-              <span>{info.label}</span> {info.value}
-            </div>
-          ))}
-        </div>
-        <div css={copyright}>
-          {FOOTER_COPYRIGHT_TEXT.cn_companyInfo_4.map((info, index) => (
-            <div key={index}>
-              <span>{info.label}</span> {info.value}
-            </div>
-          ))}
-        </div>
-        <div css={copyright}>
-          {FOOTER_COPYRIGHT_TEXT.icp_companyInfo.map((info, index) => (
-            <div key={index}>
+            <div>
               <a
-                href="https://beian.miit.gov.cn/#/Integrated/index"
+                href="https://beian.miit.gov.cn"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                {info.value}
+                {FOOTER_COPYRIGHT_TEXT.icp_companyInfo[1].value}
               </a>
             </div>
-          ))}
+          </div>
         </div>
-        {/* <div css={copyright}>
-          {FOOTER_COPYRIGHT_TEXT.companyInfo.slice(0, 3).map((info, index) => (
-            <div key={index}>
-              <span>{info.label}</span> {info.value}
-            </div>
-          ))}
-        </div> */}
-        {/* <div css={address}>
-          <p css={companyInfoBox}>
-            {FOOTER_COPYRIGHT_TEXT.companyInfo
-              .slice(0, 3)
-              .map((info, index) => (
-                <div key={index}>
-                  <span>{info.label}</span> {info.value}
-                </div>
-              ))}
-          </p>
-          <p>
-            {FOOTER_COPYRIGHT_TEXT.companyInfoFirst.map((info, index) => (
-              <React.Fragment key={index}>
-                <span>{info.label}</span> {info.value}
-                {index < FOOTER_COPYRIGHT_TEXT.companyInfoFirst.length - 1 &&
-                  ' / '}
-              </React.Fragment>
-            ))}
-          </p>
-          <p>
-            {FOOTER_COPYRIGHT_TEXT.companyInfoSecond.map((info, index) => (
-              <React.Fragment key={index}>
-                <span>{info.label}</span> {info.value}
-                {index < FOOTER_COPYRIGHT_TEXT.companyInfoSecond.length - 1 &&
-                  ' / '}
-              </React.Fragment>
-            ))}
-          </p>
-          <p>
-            {FOOTER_COPYRIGHT_TEXT.companyInfoThird.map((info, index) => (
-              <React.Fragment key={index}>
-                <span>{info.label}</span> {info.value}
-              </React.Fragment>
-            ))}
-          </p>
-        </div> */}
         {/* <div css={copyright}>Copyright {FOOTER_COPYRIGHT_TEXT.copyright}</div> */}
       </div>
       {/* <div css={logo}><img src={footerLogo} alt="footer logo" /></div> */}
@@ -211,21 +197,38 @@ const address = css`
 
 const copyright = css`
   display: flex;
+  flex-direction: column;
   font-size: 0.8rem;
   color: #fff;
-  gap: 0.8rem;
-  padding-top: 0.5rem;
+  padding-top: 0.8rem;
   flex-wrap: wrap;
   line-height: 1.5;
 
-  & span {
-    opacity: 0.8;
+  & div {
+    padding-right: 10px;
   }
+
+  // & span {
+  //   opacity: 0.7;
+  // }
 
   & a {
     text-decoration: none;
-    color: #fff;
+    font-weight: bold;
+    color: #0075c3;
   }
+`;
+
+const copyrightSubBox = css`
+  display: flex;
+  // gap: 0.8rem;
+  flex-wrap: wrap;
+`;
+
+const infoLabel = css`
+  display: inline-block;
+  opacity: 0.7;
+  padding-right: 10px;
 `;
 
 const logo = css`

@@ -71,9 +71,15 @@ const FOOTER_COPYRIGHT_TEXT = {
     title: '이용안내',
     link: 'https://www.sooil.com/bbs/content.php?co_id=information',
   },
+  companyInfo_0: [
+    {
+      label: '',
+      value: 'SOOIL Development Co., Ltd',
+    },
+  ],
   companyInfo_1: [
     {
-      label: '地址',
+      label: '除朝辭',
       value:
         '62, Yonggu-daero 2325beon-gil, Giheung-gu, Yongin-si, Gyeonggi-do Republic of Korea',
     },
@@ -88,7 +94,7 @@ const FOOTER_COPYRIGHT_TEXT = {
       value: '+82(2)3463-7707',
     },
   ],
-  companyInfoFirst: [
+  companyInfo_3: [
     {
       label: 'Email',
       value: 'sooil@sooil.com',
@@ -142,6 +148,10 @@ const FOOTER_COPYRIGHT_TEXT = {
     {
       label: '',
       value: '©2024 深圳市丹纳科技有限公司 版权所有 粤ICP16068842号-4',
+    },
+    {
+      label: '',
+      value: '粤ICP16068842号-4',
     },
   ],
   companyInfoThird: [
