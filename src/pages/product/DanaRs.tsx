@@ -142,6 +142,10 @@ const imgBox = css`
   border: 1px soild red;
   gap: 10px;
   box-sizing: border-box;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 const imgItem = (bg: string) => css`
@@ -149,7 +153,7 @@ const imgItem = (bg: string) => css`
   height: 360px;
   background-image: url(${bg});
   background-size: cover;
-  background-position: center;
+  // background-position: center;
   background-repeat: no-repeat;
   box-sizing: border-box;
 `;
@@ -171,6 +175,7 @@ const ImgItem_text = css`
 const ImgItem_1 = (bg: string) => css`
   ${imgItem(bg)};
   width: 70%;
+  background-position: center right;
 
   & p {
     ${ImgItem_text}
@@ -185,29 +190,45 @@ const ImgItem_1 = (bg: string) => css`
     font-weight: bold;
     line-height: 1.6;
   }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    // background-position: center;
+  }
 `;
 
 const ImgItem_2 = (bg: string) => css`
   ${imgItem(bg)};
   width: 30%;
+  background-position: center left;
 
   & p {
     ${ImgItem_text}
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
   }
 `;
 
 const ImgItem_3 = (bg: string) => css`
   ${imgItem(bg)};
   width: 30%;
+  background-position: center right;
 
   & p {
     ${ImgItem_text}
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
   }
 `;
 
 const ImgItem_4 = (bg: string) => css`
   ${imgItem(bg)};
   width: 70%;
+  background-position: center left;
 
   & p {
     ${ImgItem_text}
@@ -221,12 +242,17 @@ const ImgItem_4 = (bg: string) => css`
     color: #000;
     font-weight: bold;
     line-height: 1.6;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
   }
 `;
 
 const ImgItem_5 = (bg: string) => css`
   ${imgItem(bg)};
   width: 100%;
+  background-position: center left;
 
   & p {
     ${ImgItem_text}
@@ -240,6 +266,10 @@ const ImgItem_5 = (bg: string) => css`
     color: #000;
     font-weight: bold;
     line-height: 1.6;
+  }
+
+  @media (max-width: 768px) {
+    background-position: center 20%;
   }
 `;
 

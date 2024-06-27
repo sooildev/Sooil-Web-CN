@@ -71,58 +71,77 @@ const FOOTER_COPYRIGHT_TEXT = {
     title: '이용안내',
     link: 'https://www.sooil.com/bbs/content.php?co_id=information',
   },
-  companyInfo: [
-    {
-      label: 'E-mail',
-      value: 'dana@golddana.com',
-    },
-    {
-      label: '电话',
-      value: '0755-83479626',
-    },
-    {
-      label: '传真',
-      value: '0755-83458827',
-    },
+  companyInfo_1: [
     {
       label: '地址',
-      value: '深圳市福田区福田街道福华一路98号卓越大厦1703-1704',
+      value:
+        '62, Yonggu-daero 2325beon-gil, Giheung-gu, Yongin-si, Gyeonggi-do Republic of Korea',
+    },
+  ],
+  companyInfo_2: [
+    {
+      label: 'Tel',
+      value: '+82(2)3463-0041',
     },
     {
-      label: '邮编',
-      value: '518040',
-    },
-    {
-      label: '',
-      value: '粤ICP备16068842号-4',
+      label: 'Fax',
+      value: '+82(2)3463-7707',
     },
   ],
   companyInfoFirst: [
     {
-      label: '회사명',
-      value: 'SOOIL Development',
+      label: 'Email',
+      value: 'sooil@sooil.com',
     },
     {
-      label: '대표',
-      value: '염윤희',
-    },
-    {
-      label: '주소',
-      value: '경기도 용인시 기흥구 용구대로2325번길 62(마북동)',
+      label: 'Homepage',
+      value: 'https://www.sooil.com',
     },
   ],
-  companyInfoSecond: [
+  cn_companyInfo_1: [
     {
-      label: '사업자 등록번호',
-      value: '108-81-30224',
+      label: '',
+      value: '南方地区售后服务商',
     },
     {
-      label: '전화',
-      value: '02-3463-0041',
+      label: '',
+      value: '深圳市丹纳科技有限公司',
+    },
+  ],
+  cn_companyInfo_2: [
+    {
+      label: '地址',
+      value: '深圳市福田区福田街道福安社区福华一路 98号卓越大厦 1703-1704',
     },
     {
-      label: '팩스',
-      value: '02-3463-7707',
+      label: '电话',
+      value: '0755-8347 9626',
+    },
+  ],
+  cn_companyInfo_3: [
+    {
+      label: '',
+      value: '北方地区售后服务商',
+    },
+    {
+      label: '',
+      value: '北京天健君强医疗科技有限公司',
+    },
+  ],
+  cn_companyInfo_4: [
+    {
+      label: '地址',
+      value: '北京市海淀区北四环中路229号海泰大厦14层1609-1',
+    },
+    {
+      label: '电话',
+      value: '010-8288 9078',
+    },
+  ],
+  icp_companyInfo: [
+    {
+      label: '',
+      value: '©2024 深圳市丹纳科技有限公司 版权所有 粤ICP16068842号-4',
     },
   ],
   companyInfoThird: [

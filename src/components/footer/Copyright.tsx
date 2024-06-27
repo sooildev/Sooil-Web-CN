@@ -41,34 +41,67 @@ export default function Copyright() {
           </li>
         </ul> */}
         <div css={copyright}>
-          {FOOTER_COPYRIGHT_TEXT.companyInfo.slice(3).map((info, index) => (
+          {FOOTER_COPYRIGHT_TEXT.companyInfo_1.map((info, index) => (
             <div key={index}>
-              <span>
-                {index === 0 ? `Copyright © ${info.label}` : info.label}
-              </span>
-              {index === 2 ? (
-                <a
-                  href="https://beian.miit.gov.cn"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {info.value}
-                </a>
-              ) : (
-                ` ${info.value}`
-              )}
-              {/* {index < FOOTER_COPYRIGHT_TEXT.companyInfo.length - 1 && ' / '} */}
+              <span>{info.label}</span> {info.value}
             </div>
           ))}
         </div>
         <div css={copyright}>
-          {FOOTER_COPYRIGHT_TEXT.companyInfo.slice(0, 3).map((info, index) => (
+          {FOOTER_COPYRIGHT_TEXT.companyInfo_2.map((info, index) => (
             <div key={index}>
               <span>{info.label}</span> {info.value}
-              {/* {index < FOOTER_COPYRIGHT_TEXT.companyInfo.length - 1 && ' / '} */}
             </div>
           ))}
         </div>
+        <div css={copyright}>
+          {FOOTER_COPYRIGHT_TEXT.cn_companyInfo_1.map((info, index) => (
+            <div key={index}>
+              <span>{info.label}</span> {info.value}
+            </div>
+          ))}
+        </div>
+        <div css={copyright}>
+          {FOOTER_COPYRIGHT_TEXT.cn_companyInfo_2.map((info, index) => (
+            <div key={index}>
+              <span>{info.label}</span> {info.value}
+            </div>
+          ))}
+        </div>
+        <div css={copyright}>
+          {FOOTER_COPYRIGHT_TEXT.cn_companyInfo_3.map((info, index) => (
+            <div key={index}>
+              <span>{info.label}</span> {info.value}
+            </div>
+          ))}
+        </div>
+        <div css={copyright}>
+          {FOOTER_COPYRIGHT_TEXT.cn_companyInfo_4.map((info, index) => (
+            <div key={index}>
+              <span>{info.label}</span> {info.value}
+            </div>
+          ))}
+        </div>
+        <div css={copyright}>
+          {FOOTER_COPYRIGHT_TEXT.icp_companyInfo.map((info, index) => (
+            <div key={index}>
+              <a
+                href="https://beian.miit.gov.cn/#/Integrated/index"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {info.value}
+              </a>
+            </div>
+          ))}
+        </div>
+        {/* <div css={copyright}>
+          {FOOTER_COPYRIGHT_TEXT.companyInfo.slice(0, 3).map((info, index) => (
+            <div key={index}>
+              <span>{info.label}</span> {info.value}
+            </div>
+          ))}
+        </div> */}
         {/* <div css={address}>
           <p css={companyInfoBox}>
             {FOOTER_COPYRIGHT_TEXT.companyInfo
@@ -181,7 +214,7 @@ const copyright = css`
   font-size: 0.8rem;
   color: #fff;
   gap: 0.8rem;
-  padding-top: 0.8rem;
+  padding-top: 0.5rem;
   flex-wrap: wrap;
   line-height: 1.5;
 
