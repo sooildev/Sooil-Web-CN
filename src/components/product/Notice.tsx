@@ -7,7 +7,6 @@ export default function Notice() {
   return (
     <section css={container}>
       <p>{PRODUCT_NOTICE_TEXT.first}</p>
-      <p>{PRODUCT_NOTICE_TEXT.second}</p>
     </section>
   );
 }

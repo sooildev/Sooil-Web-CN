@@ -61,7 +61,7 @@ export default function DanaRs() {
             <table>
               <tbody>
                 <tr>
-                  <th>有点</th>
+                  <th>优点</th>
                   <td>智能泵</td>
                 </tr>
                 <tr>
@@ -96,8 +96,7 @@ export default function DanaRs() {
                         10)
                         安全装置：堵塞时报警功能、输注速度校正、可设置最大输注量
                       </li>
-                      <li>11) 持续使用时间（电池）：1个月</li>
-                      <li>12) 防水功能：IPX8</li>
+                      <li>11) 防水功能：IP28</li>
                     </ol>
                   </td>
                 </tr>

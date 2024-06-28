@@ -73,7 +73,7 @@ const FOOTER_COPYRIGHT_TEXT = {
   },
   companyInfo_0: [
     {
-      label: '除朝辭',
+      label: '生产厂家',
       value: 'SOOIL Development Co., Ltd',
     },
   ],

@@ -25,7 +25,7 @@ export default function Anydana() {
             </p>
             <h5>AnyDANA的3大功能</h5>
             <ul>
-              <li>• 可连接有蓝牙功能的 的DANA Diabecare胰岛素泵使用。</li>
+              <li>• 可连接有蓝牙功能的 DANA Diabecare胰岛素泵使用。</li>
               <li>• 可查看胰岛素泵上储存的数据和信息。</li>
               <li>
                 •
@@ -74,7 +74,7 @@ export default function Anydana() {
                 为了安全使用，AnyDANA需要登陆密码。请注意不要将密码告诉他人并且记住此密码。
               </li>
               <li css={paddingLeft}>
-                5. 如果AnyDANA应用程序出现问题，请与当地胰岛素泵经销商联系。
+                5. 如果AnyDANA应用程序出现问题，请与当地胰岛素泵售后服务商联系。
               </li>
               <li css={paddingLeft}>
                 6.

@@ -78,7 +78,7 @@ const PRODUCT_DANA_R = {
 };
 const PRODUCT_DANA_IIS = {
   danaimgs: [dana_iis1, dana_iis2, dana_iis3, dana_iis4, dana_iis5],
-  title: 'Dana Diabecare RS',
+  title: 'Dana Diabecare IIS',
   subtitle: ['Is it REAL!', '45年的悠久历史，稳定性！'],
   description: [
     '出口品质、美国食品药品管理局认证（FDA）、欧盟一体化（CE）认证',
@@ -97,7 +97,7 @@ const PRODUCT_ANY_DANA = {
   title: 'AnyDana',
   subtitle: [],
   description: [
-    'AnyDANA是与DANA连接胰岛素泵使用的移动应用程序。',
+    'AnyDANA是跟丹纳胰岛素泵连接使用的移动应用程序。',
     'AnyDANA-A是Android应用程序，AnyDANA-i是iOS应用程序。',
   ],
   keywords: [],
