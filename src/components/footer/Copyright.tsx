@@ -3,6 +3,7 @@ import React from 'react';
 import { css } from '@emotion/react';
 import footerLogo from '../../assets/images/logo/footer_logo.png';
 import { FOOTER_COPYRIGHT_TEXT } from '../../constants';
+import { Link } from 'react-router-dom';
 
 export default function Copyright() {
   return (
@@ -114,6 +115,11 @@ export default function Copyright() {
                 {FOOTER_COPYRIGHT_TEXT.icp_companyInfo[1].value}
               </a>
             </div>
+            <div>
+              <Link to="/privacy" css={link}>
+                隐私政策
+              </Link>
+            </div>
           </div>
         </div>
         {/* <div css={copyright}>Copyright {FOOTER_COPYRIGHT_TEXT.copyright}</div> */}
@@ -164,9 +170,7 @@ const navItem = css`
 `;
 
 const link = css`
-  color: #686868;
-  cursor: pointer;
-  font-size: 0.8rem;
+  color: #ffffff !important;
 `;
 
 const address = css`
