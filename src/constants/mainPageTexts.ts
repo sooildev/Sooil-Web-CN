@@ -145,7 +145,7 @@ const FOOTER_COPYRIGHT_TEXT = {
     },
     {
       label: '',
-      value: '粤ICP16068842号-4',
+      value: '粤ICP备16068842号-4',
     },
   ],
   companyInfoThird: [
@@ -154,7 +154,8 @@ const FOOTER_COPYRIGHT_TEXT = {
       value: '2007-110-10-0232, 2007-110-10-0231, 2007-110-10-0276',
     },
   ],
-  copyright: '© All rights reserved by SOOIL Developments Co., Ltd',
+  addMedicineCertificateNumber:
+    '互联网药品信息服务资格证书 [（粤）-非经营性-2024-0330]',
 };
 
 export {
