@@ -122,7 +122,9 @@ export default function Copyright() {
             </div>
           </div>
         </div>
-        {/* <div css={copyright}>Copyright {FOOTER_COPYRIGHT_TEXT.copyright}</div> */}
+        <div css={copyright}>
+          {FOOTER_COPYRIGHT_TEXT.addMedicineCertificateNumber}
+        </div>
       </div>
       {/* <div css={logo}><img src={footerLogo} alt="footer logo" /></div> */}
     </div>
